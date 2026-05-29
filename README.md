@@ -69,16 +69,6 @@ Real-time visualization dashboard with 4 panels:
 | Request Duration (Sum) | `request_duration_seconds_sum` | Time Series | Sum of request durations |
 
 
-
-**Dashboard Panels:**
-
-| Panel | Query |
-|-------|-------|
-| Prometheus Health | `up{job="my-app"}` |
-| Request Duration Bucket | `request_duration_seconds_bucket` |
-| Requests Total | `requests_total` |
-| Request Duration Sum | `request_duration_seconds_sum` |
-
 **Sample Dashboard Preview:**
 
 ![Grafana Dashboard](./grafana-dashboard.png)
