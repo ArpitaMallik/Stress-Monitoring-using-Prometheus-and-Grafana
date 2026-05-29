@@ -15,14 +15,6 @@ This project provides a complete load testing setup that:
 - Scrapes and stores metrics with Prometheus
 - Visualizes results in real-time with Grafana dashboards
 
-## Architecture
-
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│     k6      │───▶│   FastAPI   │───▶│ Prometheus  │───▶  Grafana
-│ (Load Test) │    │   (App)     │    │ (Scrape)    │       (Dashboard)
-└─────────────┘    └─────────────┘    └─────────────┘
-```
 
 ## Project Structure
 
