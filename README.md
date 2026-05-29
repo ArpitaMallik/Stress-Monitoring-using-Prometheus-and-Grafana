@@ -51,7 +51,7 @@ A simple web app instrumented with Prometheus metrics:
 | `requests_total` | Counter | Total number of requests by path |
 | `request_duration_seconds` | Histogram | Request duration in seconds |
 
-### 2. k6 Load Test (`k6/load-test.js`)
+### 2. k6 Load Test (`load-test.js`)
 
 Configurable load test that ramps up virtual users:
 
@@ -76,18 +76,9 @@ Real-time visualization dashboard with 4 panels:
 | Requests Total | `requests_total` | Time Series | Total request count by path |
 | Request Duration (Sum) | `request_duration_seconds_sum` | Time Series | Sum of request durations |
 
-**Screenshot the Dashboard:**
 
-1. Open Grafana at `http://localhost:3000`
-2. Go to your dashboard
-3. Press `Ctrl+Shift+S` (Windows) or use the share button (top right) → **Export** → **Save PDF**
-4. Or use `Win+Shift+S` to screenshot a region directly
 
-**Add the Dashboard Panels:**
-
-1. Click **+** → **Dashboard** → **Add visualization**
-2. Select **Prometheus** as data source
-3. Add each panel with the queries below:
+**Dashboard Panels:**
 
 | Panel | Query |
 |-------|-------|
@@ -100,8 +91,6 @@ Real-time visualization dashboard with 4 panels:
 
 ![Grafana Dashboard](./grafana-dashboard.png)
 
-
-## Quick Start
 
 ### Prerequisites
 
