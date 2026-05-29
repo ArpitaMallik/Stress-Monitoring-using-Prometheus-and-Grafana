@@ -3,7 +3,7 @@
 A real-time stress testing and monitoring pipeline using **FastAPI**, **Prometheus**, **k6**, and **Grafana**.
 
 ![Architecture](https://img.shields.io/badge/Architecture-FastAPI--Prometheus--k6--Grafana-blue)
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Overview
