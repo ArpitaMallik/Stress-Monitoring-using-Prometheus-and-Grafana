@@ -1,4 +1,4 @@
-# Stress Monitoring Lab
+# Stress Monitoring using Prometheus and Grafana
 
 A real-time stress testing and monitoring pipeline using **FastAPI**, **Prometheus**, **k6**, and **Grafana**.
 
