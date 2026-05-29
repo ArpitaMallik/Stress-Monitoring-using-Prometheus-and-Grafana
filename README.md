@@ -40,8 +40,10 @@ A simple web app instrumented with Prometheus metrics:
 **Metrics exported:**
 | Metric | Type | Description |
 |--------|------|-------------|
+| `Prometheus Health` | Stat | Checks if Prometheus can reach the app |
 | `requests_total` | Counter | Total number of requests by path |
 | `request_duration_seconds` | Histogram | Request duration in seconds |
+| `request_duration_seconds_sum` | Time Series | Sum of request durations |
 
 ### 2. k6 Load Test (`load-test.js`)
 
