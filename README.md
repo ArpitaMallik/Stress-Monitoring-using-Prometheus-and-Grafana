@@ -15,6 +15,10 @@ This project provides a complete load testing setup that:
 - Scrapes and stores metrics with Prometheus
 - Visualizes results in real-time with Grafana dashboards
 
+**Dashboard Preview:**
+
+![Grafana Dashboard](./grafana-dashboard.png)
+
 
 ## Project Structure
 
@@ -69,11 +73,6 @@ Real-time visualization dashboard with 4 panels:
 | Request Duration (Bucket) | `request_duration_seconds_bucket` | Time Series | Histogram buckets for latency distribution |
 | Requests Total | `requests_total` | Time Series | Total request count by path |
 | Request Duration (Sum) | `request_duration_seconds_sum` | Time Series | Sum of request durations |
-
-
-**Sample Dashboard Preview:**
-
-![Grafana Dashboard](./grafana-dashboard.png)
 
 
 ### Prerequisites
