@@ -1,9 +1,9 @@
-# Stress Monitoring Lab
+# Stress Monitoring using Prometheus and Grafana
 
 A real-time stress testing and monitoring pipeline using **FastAPI**, **Prometheus**, **k6**, and **Grafana**.
 
 ![Architecture](https://img.shields.io/badge/Architecture-FastAPI--Prometheus--k6--Grafana-blue)
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Overview
@@ -15,14 +15,10 @@ This project provides a complete load testing setup that:
 - Scrapes and stores metrics with Prometheus
 - Visualizes results in real-time with Grafana dashboards
 
-## Architecture
+**Dashboard Preview:**
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│     k6      │───▶│   FastAPI   │───▶│ Prometheus  │───▶  Grafana
-│ (Load Test) │    │   (App)     │    │ (Scrape)    │       (Dashboard)
-└─────────────┘    └─────────────┘    └─────────────┘
-```
+![Grafana Dashboard](./grafana-dashboard.png)
+
 
 ## Project Structure
 
@@ -48,10 +44,12 @@ A simple web app instrumented with Prometheus metrics:
 **Metrics exported:**
 | Metric | Type | Description |
 |--------|------|-------------|
+| `Prometheus Health` | Stat | Checks if Prometheus can reach the app |
 | `requests_total` | Counter | Total number of requests by path |
 | `request_duration_seconds` | Histogram | Request duration in seconds |
+| `request_duration_seconds_sum` | Time Series | Sum of request durations |
 
-### 2. k6 Load Test (`k6/load-test.js`)
+### 2. k6 Load Test (`load-test.js`)
 
 Configurable load test that ramps up virtual users:
 
@@ -76,32 +74,6 @@ Real-time visualization dashboard with 4 panels:
 | Requests Total | `requests_total` | Time Series | Total request count by path |
 | Request Duration (Sum) | `request_duration_seconds_sum` | Time Series | Sum of request durations |
 
-**Screenshot the Dashboard:**
-
-1. Open Grafana at `http://localhost:3000`
-2. Go to your dashboard
-3. Press `Ctrl+Shift+S` (Windows) or use the share button (top right) → **Export** → **Save PDF**
-4. Or use `Win+Shift+S` to screenshot a region directly
-
-**Add the Dashboard Panels:**
-
-1. Click **+** → **Dashboard** → **Add visualization**
-2. Select **Prometheus** as data source
-3. Add each panel with the queries below:
-
-| Panel | Query |
-|-------|-------|
-| Prometheus Health | `up{job="my-app"}` |
-| Request Duration Bucket | `request_duration_seconds_bucket` |
-| Requests Total | `requests_total` |
-| Request Duration Sum | `request_duration_seconds_sum` |
-
-**Sample Dashboard Preview:**
-
-![Grafana Dashboard](./grafana-dashboard.png)
-
-
-## Quick Start
 
 ### Prerequisites
 
