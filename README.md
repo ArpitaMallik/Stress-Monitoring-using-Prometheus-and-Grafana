@@ -55,8 +55,7 @@ actually working.
 
 ## System architecture
 
-> 🚧 A full data-flow diagram (draw.io + official SVG icons) is coming in a
-> follow-up pass. For now, use the diagram under **What you'll build** above.
+![System Architecture](./stress-monitoring-architecture.drawio.png)
 
 ---
 
