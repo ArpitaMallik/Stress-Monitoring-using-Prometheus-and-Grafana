@@ -141,6 +141,9 @@
     "title": "Grafana Profiles Drilldown"
   },
   "explorer": {
+    "add-to-dashboard": {
+      "modal-title": "Add to dashboard"
+    },
     "exploration-type": {
       "all-services": "All services",
       "all-services-description": "Overview of all services, for any given profile type",
@@ -150,7 +153,6 @@
       "favorites-description": "Overview of favorited visualizations",
       "flame-graph": "Flame graph",
       "flame-graph-description": "Single service flame graph",
-      "label": "Exploration",
       "labels": "Labels",
       "labels-description": "Single service label exploration and filtering",
       "profile-types": "Profile types",
@@ -174,10 +176,12 @@
     "error-flamegraph-com": "Failed to export to flamegraph.com!",
     "error-loading-profile": "Error while loading flamebearer profile data!",
     "error-png": "Failed to export to png!",
+    "error-png-no-canvas": "Please ensure the flame graph is visible before exporting to png.",
     "error-pprof": "Failed to export to pprof!",
     "json": "json",
     "json-label": "json",
     "png": "png",
+    "png-disabled-description": "Switch to the flame graph view to export it as a png",
     "png-label": "png",
     "pprof": "pprof",
     "tooltip": "Export profile data"
@@ -293,11 +297,11 @@
     "title": "Function Details"
   },
   "give-feedback": {
-    "button": "Give feedback",
-    "tooltip": "Share your thoughts about Profiles in Grafana."
+    "button": "Give feedback"
   },
   "grid": {
     "empty-state": {
+      "no-profiles": "No profiles found. Widen the time range or start sending profile data.",
       "no-results": "No results"
     },
     "error": {
@@ -349,7 +353,6 @@
       "include-tooltip": "Include \"{{label}}\" in the filters"
     },
     "grid": {
-      "no-results": "No results",
       "refresh-tooltip": "Click to completely refresh all the panels present on the screen"
     },
     "stats-panel": {
@@ -450,11 +453,19 @@
     "commit-sha": "Commit SHA: {{shortCommitSha}}",
     "contribute": "Contribute",
     "documentation": "Documentation",
-    "grafana-version": "Grafana {{edition}} v{{version}} ({{env}})",
+    "grafana-version": "Grafana {{edition}} ({{env}})",
     "last-update": "Last update: {{updated}}",
     "report-issue": "Report an issue",
     "title": "Plugin info",
     "version": "Grafana Profiles Drilldown v{{version}}"
+  },
+  "profiles": {
+    "kg-annotations": {
+      "insights-label": "Insights",
+      "severity-critical": "Critical",
+      "severity-info": "Info",
+      "severity-warning": "Warning"
+    }
   },
   "query-analysis": {
     "blocks": "Blocks",
@@ -552,7 +563,7 @@
       "no-searches": "No saved searches to display.",
       "no-searches-tooltip": "No saved searches to load",
       "remove-tooltip": "Remove",
-      "saved-query-tooltip": "Load saved query",
+      "saved-query-tooltip": "Load Saved query",
       "select": "Select",
       "select-pyroscope-query": "Please select a Pyroscope query.",
       "title": "Load a previously saved search",
@@ -566,7 +577,7 @@
       "existing-search-warning": "There is a previously saved search with the same query: {{title}}",
       "info-message": "Saved searches are stored locally in your browser and will only be available on this device.",
       "save": "Save",
-      "saved-queries-tooltip": "Save in Saved Queries",
+      "saved-queries-tooltip": "Save in Saved queries",
       "success-body": "Search successfully saved.",
       "success-message": "Search successfully saved.",
       "success-title": "Success",
@@ -625,6 +636,7 @@
   },
   "timeseries": {
     "menu": {
+      "add-to-dashboard": "Add to dashboard",
       "exemplars": "Exemplars",
       "open-in-explore": "Open in Explore",
       "scale-linear": "Linear",
