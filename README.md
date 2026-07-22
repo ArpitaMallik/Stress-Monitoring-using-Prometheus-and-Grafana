@@ -205,7 +205,6 @@ request_duration_seconds_sum{path="/"} 0.000012...
 request_duration_seconds_count{path="/"} 1.0
 ```
 
-![Chapter 1 — curl output showing the hello message and the /metrics exposition format](./screenshots/ch1-fastapi-metrics.png)
 
 ✅ **Checkpoint:** `curl /` returns the hello message, and `curl /metrics`
 shows `requests_total` and `request_duration_seconds_*`, and the counter
