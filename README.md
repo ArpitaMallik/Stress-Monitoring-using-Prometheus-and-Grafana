@@ -55,7 +55,7 @@ actually working.
 
 ## System architecture
 
-![System Architecture](./stress-monitoring-architecture.drawio.png)
+![System Architecture](./images/stress-monitoring-architecture.drawio.png)
 
 ---
 
@@ -263,7 +263,7 @@ Prometheus UI: `http://localhost:9090`
 3. Curl `http://localhost:8000` a few more times and re-run the query — the
    value climbs.
 
-![Chapter 2 — Prometheus Targets page showing my-app UP](./screenshots/ch2-prometheus-targets.png)
+![Chapter 2 — Prometheus Targets page showing my-app UP](./images/prom-targets.png)
 
 ✅ **Checkpoint:** `my-app` shows UP in Targets, and `requests_total` returns
 data in the Prometheus graph view.
@@ -339,7 +339,7 @@ Also confirm the traffic reached Prometheus: run
 `rate(requests_total[1m])` in the Prometheus graph view during the test — it
 should spike above zero.
 
-![Chapter 3 — k6 load test summary output](./screenshots/ch3-k6-summary.png)
+![Chapter 3 — k6 load test summary output](./images/k6-testing.png)
 
 ✅ **Checkpoint:** k6 reports 100% passing checks, and
 `rate(requests_total[1m])` rises in Prometheus while the test runs.
@@ -370,7 +370,7 @@ be asked to change it).
    and Prometheus is too, so it reaches it the same `host.docker.internal` way.
 3. Click **Save & test** — you want the green "Successfully queried" message.
 
-![Chapter 4a — Prometheus data source saved and tested in Grafana](./screenshots/ch4-datasource.png)
+![Chapter 4a — Prometheus data source saved and tested in Grafana](./images/grafana-success.png)
 
 ### Build the panels
 
@@ -392,7 +392,7 @@ be asked to change it).
 3. Watch: Health reads `1`, Requests Total climbs, and the duration panels
    react as load ramps up and down.
 
-![Chapter 4b — Grafana dashboard with all four panels live during a load test](./grafana-dashboard.png)
+![Chapter 4b — Grafana dashboard with all four panels live during a load test](./images/grafana-dashboard.png)
 
 ✅ **Checkpoint:** all four panels render, Health reads `1`, graphs move in
 step with your k6 run.
